@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{13018C4B-EF2C-93E3-FE24-95B8E42F9CAB}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Demo/Scripts/BulletCtrl.cs">
+    <Files>
+      <File FileName="Assets/Demo/ExamCode/PlayerController.cs" Line="13" Column="6" />
+      <File FileName="Assets/Demo/Scripts/ARTaptoPlaceObject.cs" Line="9" Column="2" />
+      <File FileName="Assets/Demo/Scripts/HydraController.cs" Line="94" Column="6" />
+      <File FileName="Assets/Demo/Scripts/BulletCtrl.cs" Line="10" Column="5" />
+      <File FileName="Assets/Demo/Scripts/FireCtrl.cs" Line="12" Column="6" />
+      <File FileName="Assets/Demo/Scripts/another/ObjManager.cs" Line="13" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
