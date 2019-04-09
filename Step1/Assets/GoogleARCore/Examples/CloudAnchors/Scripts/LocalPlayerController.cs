@@ -33,13 +33,14 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// <summary>
         /// The Star model that will represent networked objects in the scene.
         /// </summary>
-        public GameObject StarPrefab;
+        public GameObject HydraPrefab;
 
         /// <summary>
         /// The Anchor model that will represent the anchor in the scene.
         /// </summary>
-        public GameObject AnchorPrefab;
-
+        public GameObject MapPrefab;
+        public GameObject HaetaePrefab;
+        public GameObject UnicornPrefab;
         /// <summary>
         /// The Unity OnStartLocalPlayer() method.
         /// </summary>
@@ -61,7 +62,7 @@ namespace GoogleARCore.Examples.CloudAnchors
         public void SpawnAnchor(Vector3 position, Quaternion rotation, Component anchor)
         {
             // Instantiate Anchor model at the hit pose.
-            var anchorObject = Instantiate(AnchorPrefab, position, rotation);
+            var anchorObject = Instantiate(MapPrefab, position, rotation);
 
             // Anchor must be hosted in the device.
             anchorObject.GetComponent<AnchorController>().HostLastPlacedAnchor(anchor);
@@ -80,14 +81,36 @@ namespace GoogleARCore.Examples.CloudAnchors
 #pragma warning disable 618
         [Command]
 #pragma warning restore 618
-        public void CmdSpawnStar(Vector3 position, Quaternion rotation)
+        public void CmdSpawnHydra(Vector3 position, Quaternion rotation)
         {
             // Instantiate Star model at the hit pose.
-            var starObject = Instantiate(StarPrefab, position, rotation);
+            var hydraObject = Instantiate(HydraPrefab, position, rotation);
 
             // Spawn the object in all clients.
 #pragma warning disable 618
-            NetworkServer.Spawn(starObject);
+            NetworkServer.Spawn(hydraObject);
+#pragma warning restore 618
+        }
+
+
+        public void CmdSpawnHaetae(Vector3 position, Quaternion rotation)
+        {
+            // Instantiate Star model at the hit pose.
+            var haetaeObject = Instantiate(HaetaePrefab, position, rotation);
+
+            // Spawn the object in all clients.
+#pragma warning disable 618
+            NetworkServer.Spawn(haetaeObject);
+#pragma warning restore 618
+        }
+        public void CmdSpawnUnicorn(Vector3 position, Quaternion rotation)
+        {
+            // Instantiate Star model at the hit pose.
+            var unicornObject = Instantiate(UnicornPrefab, position, rotation);
+
+            // Spawn the object in all clients.
+#pragma warning disable 618
+            NetworkServer.Spawn(unicornObject);
 #pragma warning restore 618
         }
     }

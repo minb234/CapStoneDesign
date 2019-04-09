@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C3777502-77F4-ACAC-34E8-308DF9B8448A}</ProjectGuid>
+    <ProjectGuid>{AD73C13A-B77D-5653-88D0-A236EB37B269}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -78,19 +78,19 @@
     <None Include="Assets\GoogleARCore\Editor\ARCoreiOSDependencies.template" />
     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.95.0.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -330,31 +330,31 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Google.IOSResolver_v1.2.95.0">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.95.0.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.95.0.dll</HintPath>
     </Reference>
     <Reference Include="Google.JarResolver_v1.2.95.0">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.95.0.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.95.0.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandler">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandlerImpl_v1.2.95.0">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.95.0.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.95.0.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/home/Desktop/유니티/prototype/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/capstone/CapStoneDesign/Step1/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -713,7 +713,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{93FDA6B2-70C3-C7E3-00B8-3BA81DB5C15A}</Project>
+      <Project>{7568A810-94E8-F666-25F2-838319DE0F13}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>

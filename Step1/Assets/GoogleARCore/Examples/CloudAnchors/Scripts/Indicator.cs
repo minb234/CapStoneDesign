@@ -47,8 +47,7 @@ public class Indicator : MonoBehaviour
         placementPoseIsValid = Frame.Raycast(Screen.width / 2, Screen.height / 2, flags, out hit);
 
         //placementPoseIsValid = hit.Count > 0;
-        //debug1.text = hit.Pose.ToString();
-        // debug3.text = placementPoseIsValid.ToString();
+
 
         if (placementPoseIsValid)
         {
@@ -59,12 +58,9 @@ public class Indicator : MonoBehaviour
             {
                 desPose = hit.Pose;
                 desVector = hit.Pose.position;
-                //debug2.text = desPose.ToString();
             }
 
-            //var cameraForward = Camera.current.transform.forward;
-            //var cameraBearing = new Vector3(cameraForward.x, 0, cameraForward.z).normalized;
-            //placementPose.rotation = Quaternion.LookRotation(cameraBearing);
+
         }
     }
 

@@ -25,6 +25,7 @@ public class HydraController : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         gameObject.name = "HydraController";
         //button.onClick.AddListener(UpdatePlacementPose);
     }
@@ -36,18 +37,14 @@ public class HydraController : NetworkBehaviour
         {
             return;
         }
-    }
-    public void Move()
-    {
-        if (Input.touchCount > 1)
-        {
-
-            this.transform.Translate(transform.forward * 0.05f);
-        }
-    }
+}
+ 
 
     public void UpdatePlacementPose()
     {
+        //if (!isLocalPlayer) {
+        //    return;
+        //}
         Ray ray;
         //TrackableHit hit;
         RaycastHit hit;
@@ -57,11 +54,13 @@ public class HydraController : NetworkBehaviour
 
         if(Physics.Raycast(ray, out hit))
         {
-            //indicator.gameObject.SetActive(true);
-            //indicator.transform.SetPositionAndRotation(hit.point, new Quaternion(0,0,0,0));
-            //indicator.transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+
             this.transform.LookAt(hit.point);
-            this.transform.position = Vector3.MoveTowards(this.transform.position, hit.point, 0.05f);
+            //lerp는 정해진위치까지 정확히 도달하지는 x, movetoward는 정해진위치까지 도달
+            
+            this.transform.position = Vector3.MoveTowards(this.transform.position, hit.point, 0.5f * Time.deltaTime);
+            //this.transform.position = Vector3.Lerp(this.transform.position, hit.point, 0.5f);
+
         }
         
         //TrackableHitFlags flags = TrackableHitFlags.PlaneWithinPolygon
@@ -73,7 +72,7 @@ public class HydraController : NetworkBehaviour
         //{
         //    placementPose = hit.Pose;
 
-        //    this.transform.LookAt(placementPose.position);
+        //    this.transform.LookAt(placementPose.position e);
 
 
         //    this.transform.position = Vector3.MoveTowards(this.transform.position, placementPose.position, 0.05f);

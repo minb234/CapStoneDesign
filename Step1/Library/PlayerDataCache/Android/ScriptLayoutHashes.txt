@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/home/Desktop/유니티/prototype/cloudanchor.apk
+C:/capstone/CapStoneDesign/Step1/step1.apk
 SceneListBegin?
 Assets/GoogleARCore/Examples/CloudAnchors/Scenes/CloudAnchors.unity
 SceneListEnd?
@@ -131,7 +131,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 2e0886e8d3f35ed19554346d12fefe93 Assembly-CSharp.dll:GoogleARCore.Examples.HelloAR.HelloARController
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 b6337c40e664256917540c23828614b4 Assembly-CSharp.dll:GoogleARCore.Examples.AugmentedImage.AugmentedImageVisualizer
-0451019579614cc079b33f5be5df7244 Assembly-CSharp.dll:GoogleARCore.Examples.CloudAnchors.LocalPlayerController
+895f6130441ef3c27adff047813904e7 Assembly-CSharp.dll:GoogleARCore.Examples.CloudAnchors.LocalPlayerController
 b818207c0b8a805931f7a7989870283e Assembly-CSharp.dll:GoogleARCore.ARCoreBackgroundRenderer
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 269133bf6785f1e198f98a5b4b08eda1 Assembly-CSharp.dll:GoogleARCore.Examples.CloudAnchors.ARCoreWorldOriginHelper
@@ -181,7 +181,7 @@ b2780902b187376a81470a0a0a845ea3 Assembly-CSharp.dll:GoogleARCore.ARCoreSessionC
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-b33d6a5afab236fff85640bad6aaa863 Assembly-CSharp.dll:GoogleARCore.Examples.CloudAnchors.CloudAnchorsExampleController
+45eed367170243db6a5aed531b965598 Assembly-CSharp.dll:GoogleARCore.Examples.CloudAnchors.CloudAnchorsExampleController
 40eab39826f66889566d3a3e6ef95673 Assembly-CSharp.dll:GoogleARCore.Examples.ObjectManipulation.TranslationManipulator
 cc47f7a12177b46911637845a11bd7fc Assembly-CSharp.dll:GoogleARCore.AugmentedImageDatabase
 41fcdeb6df96893d5adc4be1be613cf4 Assembly-CSharp.dll:.HydraController

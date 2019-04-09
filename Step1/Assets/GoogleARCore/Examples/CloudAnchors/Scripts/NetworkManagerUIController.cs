@@ -157,7 +157,7 @@ namespace GoogleARCore.Examples.CloudAnchors
         {
             if (isHost)
             {
-                SnackbarText.text = "Hosting Cloud Anchor...";
+                SnackbarText.text = "호스팅중...";
             }
             else
             {
@@ -174,11 +174,11 @@ namespace GoogleARCore.Examples.CloudAnchors
         {
             if (success)
             {
-                SnackbarText.text = "Cloud Anchor successfully hosted! Tap to place more stars.";
+                SnackbarText.text = "성공적으로 호스팅되었습니다! 맵을 터치하여 캐릭터를 생성하세요.";
             }
             else
             {
-                SnackbarText.text = "Cloud Anchor could not be hosted. " + response;
+                SnackbarText.text = "호스팅에 실패하였습니다. " + response;
             }
         }
 
@@ -191,11 +191,11 @@ namespace GoogleARCore.Examples.CloudAnchors
         {
             if (success)
             {
-                SnackbarText.text = "Cloud Anchor successfully resolved! Tap to place more stars.";
+                SnackbarText.text = "성공적으로 접속하였습니다! 맵을 터치하여 캐릭터를 생성하세요.";
             }
             else
             {
-                SnackbarText.text = "Cloud Anchor could not be resolved. Will attempt again. " + response;
+                SnackbarText.text = "접속에 실패하였습니다. " + response;
             }
         }
 
@@ -282,7 +282,7 @@ namespace GoogleARCore.Examples.CloudAnchors
 
             m_CurrentRoomNumber = _GeetRoomNumberFromNetworkId(matchInfo.networkId);
             _ChangeLobbyUIVisibility(false);
-            SnackbarText.text = "Find a plane, tap to create a Cloud Anchor.";
+            SnackbarText.text = "평면을 찾아 터치하여 맵을 생성하세요.";
             CurrentRoomLabel.GetComponentInChildren<Text>().text = "Room: " + m_CurrentRoomNumber;
         }
 
@@ -306,7 +306,7 @@ namespace GoogleARCore.Examples.CloudAnchors
 
             m_CurrentRoomNumber = _GeetRoomNumberFromNetworkId(matchInfo.networkId);
             _ChangeLobbyUIVisibility(false);
-            SnackbarText.text = "Waiting for Cloud Anchor to be hosted...";
+            SnackbarText.text = "호스팅을 기다리는중...";
             CurrentRoomLabel.GetComponentInChildren<Text>().text = "Room: " + m_CurrentRoomNumber;
         }
 

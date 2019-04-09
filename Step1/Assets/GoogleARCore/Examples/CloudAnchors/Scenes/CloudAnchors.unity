@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667564, g: 0.48427135, b: 0.5645232, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -336,7 +336,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Refresh list
+  m_Text: "\uC0C8\uB85C\uACE0\uCE68"
 --- !u!222 &112290215
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -511,7 +511,8 @@ MonoBehaviour:
   UIController: {fileID: 1077067569}
   ARCoreRoot: {fileID: 1995596071}
   ARCoreWorldOriginHelper: {fileID: 635649539}
-  placementIndicator: {fileID: 0}
+  placementIndicator: {fileID: 969592106}
+  button: {fileID: 1721507373}
 --- !u!4 &265054091
 Transform:
   m_ObjectHideFlags: 0
@@ -1452,6 +1453,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64666bbafe62fe14d836c0a9f76ebda1, type: 3}
+--- !u!1 &969592106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1437423133, guid: 64666bbafe62fe14d836c0a9f76ebda1,
+    type: 3}
+  m_PrefabInstance: {fileID: 969592105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1077067566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,6 +1507,8 @@ MonoBehaviour:
   m_SpawnPrefabs:
   - {fileID: 583835828314336741, guid: 54f9de1db660169469efee647dd9b327, type: 3}
   - {fileID: 4796322501284690562, guid: 5a45013c0b4429040938db844c3348d3, type: 3}
+  - {fileID: 8187857174009230699, guid: ad0873307ba6db4419b8315cc89a859d, type: 3}
+  - {fileID: 20897280873124284, guid: afdf4ff446025694b92778801623366f, type: 3}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -1660,7 +1669,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cloud Anchors Sample
+  m_Text: Match
 --- !u!222 &1107661369
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1992,9 +2001,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'No previous rooms.
-
-    Press the button below to start.'
+  m_Text: "\uD65C\uC131\uD654\uB41C \uBC29\uC774 \uC5C6\uC2B5\uB2C8\uB2E4.\n\uC0C8\uB85C\uACE0\uCE68
+    \uBC84\uD2BC\uC744 \uB204\uB974\uC138\uC694."
 --- !u!222 &1671322868
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2050,7 +2058,7 @@ RectTransform:
   m_GameObject: {fileID: 1721507371}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 692750965}
   m_Father: {fileID: 2138016334}
@@ -2097,10 +2105,21 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1721507374}
+  m_TargetGraphic: {fileID: 112290214}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 265054090}
+        m_MethodName: HydraMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1721507374

@@ -22,6 +22,7 @@ namespace GoogleARCore.Examples.CloudAnchors
 {
     using GoogleARCore;
     using UnityEngine;
+    using UnityEngine.UI;
 
     /// <summary>
     /// Controller for the Cloud Anchors Example. Handles the ARCore lifecycle.
@@ -45,16 +46,17 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// </summary>
         public ARCoreWorldOriginHelper ARCoreWorldOriginHelper;
         public GameObject placementIndicator;
-
+        public Button button;
         
-
         /// <summary>
         /// Indicates whether the Origin of the new World Coordinate System, i.e. the Cloud Anchor, was placed.
         /// </summary>
         private bool m_IsOriginPlaced = false;
 
-
-        private bool m_IsStarPlaced = false;
+        /// <summary>
+        /// 캐릭터가 이미 생성되어있는지 확인한다. 캐릭이 없다면 캐릭을 생성
+        /// </summary>
+        private bool m_IsHydraPlaced = false;
 
         /// <summary>
         /// Indicates whether the Anchor was already instantiated.
@@ -109,6 +111,8 @@ namespace GoogleARCore.Examples.CloudAnchors
         public void Update()
         {
             _UpdateApplicationLifecycle();
+            //추가 - indicator를 ray에 맞춰 위치수정
+            IndicatorPlacement();
 
             // If we are neither in hosting nor resolving mode then the update is complete.
             if (m_CurrentMode != ApplicationMode.Hosting && m_CurrentMode != ApplicationMode.Resolving)
@@ -138,6 +142,7 @@ namespace GoogleARCore.Examples.CloudAnchors
             {
                 m_LastPlacedAnchor = hit.Trackable.CreateAnchor(hit.Pose);
             }
+
             
 
 
@@ -146,16 +151,22 @@ namespace GoogleARCore.Examples.CloudAnchors
             {
                 // The first touch on the Hosting mode will instantiate the origin anchor. Any subsequent touch will
                 // instantiate a star, both in Hosting and Resolving modes.
-                if (_CanPlaceStars())
+                if (_CanPlaceHydra())
                 {
-                    if (!m_IsStarPlaced) { 
-                        _InstantiateStar();
-                        m_IsStarPlaced = true;
+                    if (!m_IsHydraPlaced) {
+                        if(m_CurrentMode == ApplicationMode.Hosting) { 
+                        _InstantiateHydra();
+                        }
+                        else if (m_CurrentMode == ApplicationMode.Resolving)
+                        {
+                            _InstantiateHaetae();
+                        }
+                        m_IsHydraPlaced = true;
                     }
                     else
                     {
-                        GameObject.Find("HydraController").GetComponent<HydraController>()
-                      .UpdatePlacementPose();
+                      //  GameObject.Find("HydraController").GetComponent<HydraController>()
+                      //.UpdatePlacementPose();
 
                     }
                 }
@@ -182,12 +193,9 @@ namespace GoogleARCore.Examples.CloudAnchors
             }
 
             m_IsOriginPlaced = true;
-
-
-
+            
             ARCoreWorldOriginHelper.SetWorldOrigin(anchorTransform);
-
-
+            
         }
 
         /// <summary>
@@ -204,7 +212,8 @@ namespace GoogleARCore.Examples.CloudAnchors
             }
 
             m_CurrentMode = ApplicationMode.Hosting;
-            _SetPlatformActive();
+            //_SetPlatformActive();
+            ARCoreRoot.SetActive(true);
         }
 
         /// <summary>
@@ -221,7 +230,8 @@ namespace GoogleARCore.Examples.CloudAnchors
             }
 
             m_CurrentMode = ApplicationMode.Resolving;
-            _SetPlatformActive();
+            //_SetPlatformActive();
+            ARCoreRoot.SetActive(true);
         }
 
         /// <summary>
@@ -274,11 +284,23 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// <summary>
         /// Instantiates a star object that will be synchronized over the network to other clients.
         /// </summary>
-        private void _InstantiateStar()
+        private void _InstantiateHydra()
         {
             //    Star must be spawned in the server so a networking Command is used.
             GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
-                      .CmdSpawnStar(m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
+                      .CmdSpawnHydra(m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
+        }
+        private void _InstantiateHaetae()
+        {
+            //    Star must be spawned in the server so a networking Command is used.
+            GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
+                      .CmdSpawnHaetae(m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
+        }
+        private void _InstantiateUnicorn()
+        {
+            //    Star must be spawned in the server so a networking Command is used.
+            GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
+                      .CmdSpawnUnicorn(m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
         }
 
         /// <summary>
@@ -300,7 +322,7 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// Indicates whether a star can be placed.
         /// </summary>
         /// <returns><c>true</c>, if stars can be placed, <c>false</c> otherwise.</returns>
-        private bool _CanPlaceStars()
+        private bool _CanPlaceHydra()
         {
             if (m_CurrentMode == ApplicationMode.Resolving)
             {
@@ -402,5 +424,33 @@ namespace GoogleARCore.Examples.CloudAnchors
                 }));
             }
         }
+
+        
+        public void IndicatorPlacement()
+        {
+
+            // && ray.GetType() == typeof(GameObject)
+            Ray ray;
+            RaycastHit hit;
+            int layermask = 1 << LayerMask.NameToLayer("Ground");
+            ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+            if(Physics.Raycast(ray, out hit, Mathf.Infinity, layermask)) {
+                placementIndicator.SetActive(true);
+                Vector3 temp = hit.point;
+                //temp.y = temp.y + 0.1f;
+                placementIndicator.transform.SetPositionAndRotation(temp, new Quaternion(0, 0, 0, 0));
+            }
+            else
+            {
+                placementIndicator.SetActive(false);
+            }
+        }
+        public void HydraMove()
+        {
+            
+            GameObject.Find("HydraController").GetComponent<HydraController>()
+                      .UpdatePlacementPose();
+        }
+
     }
 }

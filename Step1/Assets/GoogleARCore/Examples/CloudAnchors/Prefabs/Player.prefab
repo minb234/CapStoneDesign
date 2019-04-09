@@ -77,7 +77,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402737a5186cd48cd86798c77074db79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StarPrefab: {fileID: 4796322501284690562, guid: 5a45013c0b4429040938db844c3348d3,
+  HydraPrefab: {fileID: 4796322501284690562, guid: 5a45013c0b4429040938db844c3348d3,
     type: 3}
-  AnchorPrefab: {fileID: 583835828314336741, guid: 54f9de1db660169469efee647dd9b327,
+  MapPrefab: {fileID: 583835828314336741, guid: 54f9de1db660169469efee647dd9b327,
+    type: 3}
+  HaetaePrefab: {fileID: 8187857174009230699, guid: ad0873307ba6db4419b8315cc89a859d,
+    type: 3}
+  UnicornPrefab: {fileID: 20897280873124284, guid: afdf4ff446025694b92778801623366f,
     type: 3}
